@@ -1,0 +1,37 @@
+## Intro
+
+Scriptorium is a collection of programs I use to manage writing fiction.
+
+The fundamental idea behind Scriptorium is that the unit of measure in fiction is the scene.  It thinks of works of fiction as built of scenes with allowances for an intermediate level of chapters.
+
+## Directory Structure
+
+All programs assume they are run in the root of the following directory structure which is usually named after the work.  In the example below we are working on a book named, "The Greatest American Detective".
+
+the_greatest_american_detective
+    |
+    | - cfg.yml
+    | - outline.yml
+    | - wc_log.csv
+    | 
+    | - scenes/
+        |
+        | - scene_1.txt
+        | - scene_2.txt
+        | - scene_3.txt
+        | - < etc...scene files generally are scene names >
+    |
+    | - notes/
+        |
+        | - character_detective.txt
+        | - location_detectives_office.txt
+        | - meta_themes.txt
+
+## Programs
+
+*scene_manager.pl* - Perl program to harmonize the three lists of scenes:
+* The master list of scenes with writing status of needed, started, finished.
+* The list of scenes in order in which they should be placed in printing out the entire story.
+* The list of txt files in the scene directory of scenes started or finished.
+
+*scene_wc.sh* - Shell script that prints out raw word count and story word count in a scene file.  Lines in scenes that start with *%* are considered notes and are in the raw count but not the story word count.
